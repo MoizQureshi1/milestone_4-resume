@@ -73,20 +73,158 @@ button:hover{
     padding: 20px;
     border: 2px solid var(--main-color);
     border-radius: 8px;
-    background-color: var(--second-bg-color);
+    background-color: #fefefe;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    text-align: center;
-}
-#resumeOutPut h2{
-    color: var(--text-color);
 }
 .profilePicture{
     display: block;
-    margin: 0 auto;
-    border:  2px solid var(--main-color);
-    box-shadow: 0 4px 8px rgba(11, 7, 211, 0.5);
+    border:  2px solid #d7d8d8;
+    box-shadow: #d7d8d8;
     border-radius: 500%;
     width: 150px;
     height: 150px;
     object-fit: cover;
+    margin-right: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.imageSide{
+    display: flex;
+    background-color: #5d8f90;
+    width: auto;
+    padding-left: 25px;
+    
+}
+.imageSide p{
+    font-size: 40px;
+    font-weight: 700;
+    color: #fefefe;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 40px;
+}
+.imageSide span{
+    font-size: 20px;
+    font-weight: 600;
+    color: #fefefe;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 6px;
+}
+.mainTextSide{
+    display: flex;
+}
+.mainTextSide .contactSide{
+    background-color: #d7d8d8;
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 30%;
+    color: #a29793;
+    width: 35%;
+}
+.mainTextSide .contactSide .aboutSide h3{
+    font-size: 30px;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 10px;
+    color: #574b44;
+}
+.mainTextSide .contactSide .aboutSide p{
+    font-size: 15px;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 8px;
+}
+.mainTextSide .contactSide .inContact h3{
+    font-size: 30px;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 40px;
+    padding-bottom: 8px;
+    color: #574b44;
+}
+.mainTextSide .contactSide .inContact p{
+    font-size: 15px;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 4px;
+    padding-top: 5px;
+}
+.mainTextSide .contactSide .inContact p i{
+    display: flex;
+    margin-top: 4px;
+    color: #574b44;
+}
+.mainTextSide .textSide{
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.mainTextSide .textSide p{
+    color: #a29793;
+}
+.mainTextSide .textSide h3{
+    font-size: 30px;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 10px;
+    color: #574b44;
+}
+.mainTextSide .textSide h3 i{
+    color: #5d8f90;
+}
+
+/* ################################## RESPONSIVE ################################## */
+
+@media(min-width: 200px) and (max-width: 550px){
+    .imageSide p{
+        font-size: 25px;
+        margin-bottom: 10px;
+        margin-top: 30px;
+        margin-left: 15px;
+    }
+    .profilePicture{
+        width: 110px;
+        height: 110px;
+        margin-left: 12px;
+        margin-right: 8px;
+    }
+    .imageSide span{
+        font-size: 18px;
+        margin-left: 18px;
+    }
+    .mainTextSide .contactSide .aboutSide h3{
+        font-size: 15px;
+    }
+    .mainTextSide .contactSide .inContact h3{
+        font-size: 15px;
+    }
+    .mainTextSide .contactSide .inContact p{
+        font-size: 8px;
+    }
+    .mainTextSide .textSide h3{
+        font-size: 25px;
+        margin-top: 30px;
+    }
+    .mainTextSide .textSide h3 i{
+        color: #5d8f90;
+        font-size: 25px;
+    }
+}
+@media(min-width: 200px) and (max-width: 418px){
+    .profilePicture{
+        width: 110px;
+        height: 110px;
+        margin-left: 8px;
+    }
+    .mainTextSide .textSide h3{
+        display: flex;
+        font-size: 25px;
+        margin-top: 30px;
+    }
+    .mainTextSide .textSide h3 i{
+        padding-top: 6px;
+        padding-right: 6px;
+    }   
 }

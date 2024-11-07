@@ -7,19 +7,26 @@ document.getElementById('resumeForm')?.addEventListener('submit', function(event
     const profilePictureInput = document.getElementById('profilePicture') as HTMLInputElement
 
     const nameElement = document.getElementById('name') as HTMLInputElement;
+    const professionElement = document.getElementById('profession') as HTMLInputElement;
     const emailElement = document.getElementById('email') as HTMLInputElement;
     const phoneElement = document.getElementById('phone') as HTMLInputElement;
+    const addressElement = document.getElementById('address') as HTMLInputElement;
+    const aboutElement = document.getElementById('about') as HTMLInputElement;
     const educationElement = document.getElementById('education') as HTMLInputElement;
     const experienceElement = document.getElementById('experience') as HTMLInputElement;
     const skillsElement = document.getElementById('skills') as HTMLInputElement;
 
-    if(profilePictureInput && nameElement && emailElement && phoneElement && educationElement && experienceElement && skillsElement){
+    if(profilePictureInput && nameElement && professionElement && emailElement && phoneElement && addressElement && aboutElement && educationElement && experienceElement && skillsElement){
         const name = nameElement.value;
+        const profession = professionElement.value;
         const email = emailElement.value;
         const phone = phoneElement.value;
+        const address = addressElement.value;
+        const about = aboutElement.value;
         const education = educationElement.value;
         const experience = experienceElement.value;
         const skills = skillsElement.value;
+
 
         // Picture Element
         const profilePicturefile = profilePictureInput.files?.[0]
@@ -30,20 +37,39 @@ document.getElementById('resumeForm')?.addEventListener('submit', function(event
         
         // CREATE RESUME OUTPUT
         const resumeOutPut = `
-        <h2>Resume</h2>
-        ${profilePictureURL ? `<img src="${profilePictureURL}" alt="Profile Picture" class="profilePicture">` : '' }
-        <p><strong>Name:</strong> <span id="edit-name" class="editable"> ${name} </span></p>
-        <p><strong>Email:</strong> <span id="edit-edit" class="editable"> ${email} </span></p>
-        <p><strong>Phone Number:</strong> <span id="edit-phone" class="editable"> ${phone} </span></p>
+        <div class="resumeInSide">
+            <div class="imageSide">
+                ${profilePictureURL ? `<img src="${profilePictureURL}" alt="Profile Picture" class="profilePicture">` : '' }
+                <div>
+                <p id="edit-name" class="editable"> ${name} </p>
+                <span id="edit-profession" class="editable"> ${profession}</span>
+                </div>
+            </div>
+            <div class="mainTextSide">
+                <div class="contactSide">
+                <div class="aboutSide">    
+                    <h3>About Me</h3>
+                    <p id="edit-about" class="editable">${about}</p>
+                </div>
+                <div class="inContact">    
+                    <h3>Contact Me</h3>
+                    <p id="edit-phone" class="editable"><i class="fa-solid fa-phone"></i> ${phone} </p>
+                    <p id="edit-edit" class="editable"><i class="fa-solid fa-envelope"></i> ${email} </p>
+                    <p id="edit-address" class="editable"><i class="fa-solid fa-location-dot"></i> ${address} </p>
+                </div>
+                </div>
+                <div class="textSide">
+                    <h3><i class="fa-solid fa-angles-right"></i> Education</h3>
+                    <p id="edit-eaducation" class="editable">${education}</p>
 
-        <h3>Education</h3>
-        <p id="edit-eaducation" class="editable">${education}</p>
+                    <h3><i class="fa-solid fa-angles-right"></i> Experience</h3>
+                    <p id="edit-experience" class="editable">${experience}</p>
 
-        <h3>Experience</h3>
-        <p id="edit-experience" class="editable">${experience}</p>
-
-        <h3>Skills</h3>
-        <p id="edit-skille" class="editable">${skills}</p>
+                    <h3><i class="fa-solid fa-angles-right"></i> Skills</h3>
+                    <p id="edit-skille" class="editable">${skills}</p>
+                </div>
+            </div>
+        </div>
         `;
 
         const resumeOutPutElement = document.getElementById('resumeOutPut')

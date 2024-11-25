@@ -117,8 +117,8 @@ button:hover{
 .mainTextSide .contactSide{
     background-color: #d7d8d8;
     padding-top: 30px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 12px;
+    padding-right: 8px;
     padding-bottom: 30%;
     color: #a29793;
     width: 35%;
@@ -211,6 +211,9 @@ button:hover{
         color: #5d8f90;
         font-size: 25px;
     }
+    .mainTextSide .contactSide .aboutSide p{
+        font-size: 15px;
+    }
 }
 @media(min-width: 200px) and (max-width: 418px){
     .profilePicture{
@@ -220,11 +223,16 @@ button:hover{
     }
     .mainTextSide .textSide h3{
         display: flex;
-        font-size: 25px;
-        margin-top: 30px;
+        font-size: 20px;
+        margin-top: 13px;
     }
     .mainTextSide .textSide h3 i{
         padding-top: 6px;
         padding-right: 6px;
-    }   
+        font-size: 20px;
+    }
+    .mainTextSide .textSide p{
+        color: #a29793;
+        font-size: 15px;
+    }
 }
